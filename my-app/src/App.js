@@ -1324,6 +1324,478 @@ const Container1063 = styled.div`
 			</p>
 		</div>
 
+      <div>
+        <h1>68.1</h1>
+        <input
+            type="radio"
+            name="radio"
+            value="1"
+            checked={t68_1_1_value === '1'}
+            onChange={t68_1_2_changeHandler}
+        />
+        <input
+            type="radio"
+            name="radio"
+            value="2"
+            checked={t68_1_1_value === '2'}
+            onChange={t68_1_2_changeHandler}
+        />
+        <input
+            type="radio"
+            name="radio"
+            value="3"
+            checked={t68_1_1_value === '3'}
+            onChange={t68_1_2_changeHandler}
+        />
+        <p>Выбранное значение: {t68_1_1_value}</p>
+      </div>
+
+      <div>
+        <h1>68.2</h1>
+        <input
+            type="radio"
+            name="language"
+            value="JavaScript"
+            checked={t68_2_1_value === 'JavaScript'}
+            onChange={t68_2_2_changeHandler}
+        />
+        <label>JavaScript</label>
+
+        <input
+            type="radio"
+            name="language"
+            value="Python"
+            checked={t68_2_1_value === 'Python'}
+            onChange={t68_2_2_changeHandler}
+        />
+        <label>Python</label>
+
+        <input
+            type="radio"
+            name="language"
+            value="Ruby"
+            checked={t68_2_1_value === 'Ruby'}
+            onChange={t68_2_2_changeHandler}
+        />
+        <label>Ruby</label>
+
+        <p>
+          Ваш выбор: {t68_2_1_value}
+          {t68_2_1_value === 'JavaScript' && <span> - Отличный выбор, JavaScript!</span>}
+        </p>
+      </div>
+
+      <div>
+        <h1>71</h1>
+        <p>
+          Год: {date.year}, Месяц: {date.month}, День: {date.day}, День недели: {getDayOfWeek(date.year, date.month, date.day)}
+        </p>
+        <input value={date.year} onChange={(e) => handleChange('year', e)} />
+        <input value={date.month} onChange={(e) => handleChange('month', e)} />
+        <input value={date.day} onChange={(e) => handleChange('day', e)} />
+      </div>
+
+      <div>
+        <h1>72</h1>
+        <ul>
+          {result}
+        </ul>
+        <input
+            type="text"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+        />
+        <button onClick={addNote}>Добавить</button>
+      </div>
+
+      <h1>74.1</h1>
+      <div>
+        <ul>
+          {t74_1_1.map((t74_1_4, t74_1_5) => (
+              <li key={t74_1_5} onClick={() => t74_1_2(t74_1_5)}>
+                {t74_1_4}
+              </li>
+          ))}
+        </ul>
+      </div>
+
+      <h1>74.2</h1>
+      <div>
+        <ul>
+          {t74_2_1.map((t74_2_4, t74_2_5) => (
+              <li key={t74_2_5}>
+                {t74_2_4}
+                <button onClick={() => t74_2_2(t74_2_5)}>Удалить</button>
+              </li>
+          ))}
+        </ul>
+      </div>
+
+      <h1>74.3</h1>
+      <div>
+        <ul>
+          {t74_3_1.map((t74_3_4, t74_3_5) => (
+              <li key={t74_3_5} onClick={() => t74_3_3(t74_3_5)}>
+                {t74_3_4}
+              </li>
+          ))}
+        </ul>
+        <input value={t74_3_2} onChange={(e) => sett74_3_2(e.target.value)} />
+      </div>
+
+      <h1>74.4</h1>
+      <div>
+        <ul>
+          {t74_4_1.map((t74_4_7, t74_4_8) => (
+              <li key={t74_4_8} onClick={() => t74_4_4(t74_4_8)}>
+                {t74_4_7}
+              </li>
+          ))}
+        </ul>
+        <input
+            value={t74_4_2}
+            onChange={(e) => sett74_4_2(e.target.value)}
+            onBlur={t74_4_5}
+        />
+      </div>
+      <h1>74.5</h1>
+      <div>
+        <ul>
+          {t74_5_1.map((t74_5_3, t74_5_4) => (
+              <li key={t74_5_4}>{t74_5_3}</li>
+          ))}
+        </ul>
+        <button onClick={t74_5_2}>Перевернуть порядок</button>
+      </div>
+
+      <h1>75.1</h1>
+      <div>
+        <ul>
+          {t75_1_1.map((t75_1_4) => (
+              <li key={t75_1_4.id}>
+                <span>{t75_1_4.prop1}</span>
+                <span>{t75_1_4.prop2}</span>
+                <span>{t75_1_4.prop3}</span>
+              </li>
+          ))}
+        </ul>
+        <button onClick={t75_1_2}>Добавить элемент</button>
+      </div>
+
+      <h1>75.2</h1>
+      <div>
+        <ul>
+          {t75_2_1.map((t75_2_7) => (
+              <li key={t75_2_7.id}>
+                <span>{t75_2_7.prop1}</span>
+                <span>{t75_2_7.prop2}</span>
+                <span>{t75_2_7.prop3}</span>
+              </li>
+          ))}
+        </ul>
+        <input
+            value={t75_2_2}
+            onChange={(e) => sett75_2_2(e.target.value)}
+            placeholder="Prop1"
+        />
+        <input
+            value={t75_2_3}
+            onChange={(e) => sett75_2_3(e.target.value)}
+            placeholder="Prop2"
+        />
+        <input
+            value={t75_2_4}
+            onChange={(e) => sett75_2_4(e.target.value)}
+            placeholder="Prop3"
+        />
+        <button onClick={t75_2_5}>Добавить элемент</button>
+      </div>
+
+      <h1>76.1</h1>
+      <div>
+        <ul>
+          {t76_1_1.map((t76_1_4) => (
+              <li key={t76_1_4.id}>
+                <span>{t76_1_4.prop1}</span>
+                <span>{t76_1_4.prop2}</span>
+                <span>{t76_1_4.prop3}</span>
+                <button onClick={() => t76_1_2(t76_1_4.id)}>Удалить</button>
+              </li>
+          ))}
+        </ul>
+      </div>
+      <h1>76.2</h1>
+      <div>
+        <ul>
+          {t76_2_1.map((t76_2_8) => (
+              <li key={t76_2_8.id}>
+                <span>{t76_2_8.prop1}</span>
+                <span>{t76_2_8.prop2}</span>
+                <span>{t76_2_8.prop3}</span>
+                <button onClick={() => t76_2_5(t76_2_8.id)}>Заполнить инпуты</button>
+              </li>
+          ))}
+        </ul>
+        <input value={t76_2_2} readOnly />
+        <input value={t76_2_3} readOnly />
+        <input value={t76_2_4} readOnly />
+      </div>
+      <h1>76.3</h1>
+      <div>
+        <ul>
+          {t76_3_1.map((t76_3_11) => (
+              <li key={t76_3_11.id}>
+                <span>{t76_3_11.prop1}</span>
+                <span>{t76_3_11.prop2}</span>
+                <span>{t76_3_11.prop3}</span>
+                <button onClick={() => t76_3_6(t76_3_11.id)}>Заполнить инпуты</button>
+              </li>
+          ))}
+        </ul>
+        <input value={t76_3_2} onChange={(e) => sett76_3_2(e.target.value)} />
+        <input value={t76_3_3} onChange={(e) => sett76_3_3(e.target.value)} />
+        <input value={t76_3_4} onChange={(e) => sett76_3_4(e.target.value)} />
+        <button onClick={t76_3_9}>Обновить li</button>
+      </div>
+
+      <h1>77.1</h1>
+      <div>
+        {t77_1_1.map((t77_1_6) => (
+            <p key={t77_1_6.id}>
+              {t77_1_6.name}{" "}
+              {t77_1_6.show && <i>{t77_1_6.desc}</i>}
+              <button onClick={() => t77_1_2(t77_1_6.id)}>
+                {t77_1_6.show ? "Скрыть" : "Показать"}
+              </button>
+            </p>
+        ))}
+      </div>
+
+      <h1>79.1</h1>
+      <div>
+        <User />
+      </div>
+
+      <h1>80.1</h1>
+      <div>
+        <User />
+        <User />
+        <User />
+      </div>
+
+      <h1>81.1</h1>
+      <div>
+        <Employee lastName="Иванов" firstName="Иван" patronymic="Иванович" salary="50000" />
+        <Employee lastName="Петров" firstName="Петр" patronymic="Петрович" salary="60000" />
+        <Employee lastName="Сидоров" firstName="Сидор" patronymic="Сидорович" salary="55000" />
+      </div>
+
+      <h1>82.1</h1>
+      <div>
+        <Employee
+            lastName={lastName1}
+            firstName={firstName1}
+            patronymic={patronymic1}
+            salary={salary1}
+        />
+        <Employee
+            lastName={lastName2}
+            firstName={firstName2}
+            patronymic={patronymic2}
+            salary={salary2}
+        />
+        <Employee
+            lastName={lastName3}
+            firstName={firstName3}
+            patronymic={patronymic3}
+            salary={salary3}
+        />
+      </div>
+
+      <h1>83.1</h1>
+      <div>
+        <table border="1">
+          <thead>
+          <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Возраст</th>
+          </tr>
+          </thead>
+          <tbody>
+          {users1.map((user1) => (
+              <User1 key={user1.id} name={user1.name} surn={user1.surn} age={user1.age} />
+          ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h1>84.1</h1>
+      <div>
+        <table border="1">
+          <thead>
+          <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Возраст</th>
+          </tr>
+          </thead>
+          <tbody>{userList}</tbody>
+        </table>
+      </div>
+
+      <h1>85.1</h1>
+      <div>{userList1}</div>;
+
+      <h1>86.1</h1>
+      <div>{userItems}</div>;
+
+
+      <h1>87.1</h1>
+      <div>
+        {users4.map(user4 => (
+            <User4
+                key={user4.id}
+                id={user4.id}
+                name={user4.name}
+                surname={user4.surname}
+                age={user4.age}
+                banned={user4.banned}
+                banUser={banUser}
+            />
+        ))}
+      </div>
+
+      <h1>96.1</h1>
+      <div>
+        <label>
+          Температура в Фаренгейтах:
+          <input
+              type="number"
+              value={temperature.fahrenheit}
+              onChange={handleFahrenheitChange}
+          />
+        </label>
+        <label>
+          Температура в Цельсиях:
+          <input
+              type="number"
+              value={temperature.celsius}
+              onChange={handleCelsiusChange}
+          />
+        </label>
+      </div>
+
+      <div>
+        <h1>96.2</h1>
+        <div>
+          <p>{sum10_d}</p>
+          <input value={value11_d} onChange={handleChange10_d} onBlur={handleBlur10_d} />
+        </div>
+        <h1>96.3</h1>
+        <div>
+          {notes10_d.map((note10_d, index10_d) => (
+              <p key={index10_d} onClick={() => startEdit10_d(index10_d)}>
+                {note10_d}
+              </p>
+          ))}
+          <input value={value11_d} onChange={changeItem10_d} />
+        </div>
+      </div>
+
+      <h1>99.1</h1>
+      <div className="class1">
+        <button className="class2">Button 1</button>
+        <button className="class3">Button 2</button>
+      </div>
+
+      <h1>99.2</h1>
+      <div style={class1}>
+        <button style={class2}>Button 1</button>
+        <button style={class3}>Button 2</button>
+      </div>
+
+      <h1>100.1</h1>
+      <div style={styles.class1}>
+        <button style={styles.class2}>Button 1</button>
+        <button style={styles.class3}>Button 2</button>
+      </div>
+
+      <h1>101.1</h1>
+      <div style={{
+        width: '300px',
+        border: '2px solid black',
+        padding: '20px',
+        textAlign: 'center'
+      }}>
+        <button style={{
+          backgroundColor: 'blue',
+          color: 'white',
+          padding: '10px 20px',
+          margin: '5px'
+        }}>
+          Button 1
+        </button>
+        <button style={{
+          backgroundColor: 'green',
+          color: 'white',
+          padding: '10px 20px',
+          margin: '5px'
+        }}>
+          Button 2
+        </button>
+      </div>
+
+      <h1>102.1</h1>
+      <div style={{
+        width: wd1,
+        border: br1,
+        padding: pd1,
+        textAlign: ta1
+      }}>
+        <button style={{
+          backgroundColor: bco1,
+          color: co1,
+          padding: pd2,
+          margin: mg1
+        }}>
+          Button 1
+        </button>
+        <button style={{
+          backgroundColor: bco2,
+          color: co1,
+          padding: pd2,
+          margin: mg1
+        }}>
+          Button 2
+        </button>
+      </div>
+
+      <h1>103.1</h1>
+      <Container>
+        <Button1>Button 1</Button1>
+        <Button2>Button 2</Button2>
+      </Container>
+
+      <h1>104.1</h1>
+      <Container1>
+        <Button3 disabled>Disabled Button</Button3>
+        <Button3>Normal Button</Button3>
+        <Button3 type="reset">Reset Button</Button3>
+      </Container1>
+
+      <h1>105.1</h1>
+      <div>
+        <Button10511>Normal Button</Button10511>
+        <Button10511 warn>Warning Button</Button10511>
+      </div>
+
+      <h1>106</h1>
+      <Container1063>
+        <DIVA_106_1>DIV A</DIVA_106_1>
+        <DIVB_106_2>DIV B</DIVB_106_2>
+        <DIVA_106_1>DIV A</DIVA_106_1>
+      </Container1063>
 
     </>
   );
