@@ -812,7 +812,9 @@ const Container1063 = styled.div`
 `;
 
 
-
+  useEffect(() => {
+    document.title = "Новый заголовок страницы";
+  }, []);
 
 
 
@@ -1799,6 +1801,8 @@ const Container1063 = styled.div`
 
     </>
   );
+
+
 }
 
 // Функция для конвертации из Фаренгейта в Цельсий
